@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipes</title>
+</head>
+<body>
+    <h1>{{ recipe_name|capfirst }}</h1>
+    {% for ingredient, amount in recipe.items %}
+        <p><li>{{ ingredient }}: {{ amount }}</li>
+    {% empty %}
+        <p>There is no such recipe:(</p>
+    {% endfor %}
+</body>
+</html>
